@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Delete Request Example</title>
+  <script>
+    function sendDeleteRequest() {
+      fetch('http://example.com/api/resource', {
+        method: 'DELETE'
+      })
+      .then(response => {
+        if (response.ok) {
+          // Request successful
+          console.log('DELETE request succeeded');
+        } else {
+          // Request failed
+          console.error('DELETE request failed');
+        }
+      })
+      .catch(error => {
+        // Request failed
+        console.error('Error:', error);
+      });
+    }
+  </script>
+</head>
+<body>
+<button onclick="sendDeleteRequest()">Send DELETE Request</button>
+</body>
+</html>
